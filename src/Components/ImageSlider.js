@@ -2,8 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ImageSlider = ({images, noOfSlides}) => {
-
+const ImageSlider = ({ images, noOfSlides }) => {
   const settings = {
     infinite: true,
     dots: false,
@@ -20,7 +19,11 @@ const ImageSlider = ({images, noOfSlides}) => {
         <Slider {...settings}>
           {images.map((item) => (
             <div key={item.id}>
-              <img src={item.src} alt={item.alt} className="m-auto cursor-pointer"/>
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="m-auto cursor-pointer"
+              />
             </div>
           ))}
         </Slider>

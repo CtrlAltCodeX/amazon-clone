@@ -1,15 +1,17 @@
 // AppRouter.js
 import React from "react";
-import { BrowserRouter as Route, Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-import Home from "./Home";
+import Section from "./Components/Section";
+import ProductPage from "./Components/ProductPage";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <Router>
-        <Route path="/" element={<Home />} />
-      </Router>
+      <Routes>
+        <Route path="/" element={<Section />} />
+        <Route path="/product-page" element={<ProductPage />} />
+      </Routes>
     </BrowserRouter>
   );
 };
